@@ -9,13 +9,15 @@
 </head>
 <body class="body">
     <header class="score-board">
-        <p class="score-board_text">current score 000</p>
-        <div class="count_current"></div>
-        <p class="score-board_text">best score 000</p>
-        <div class="count_best"></div>
+        <p class="score-board_text" id="count_current"></p>
+        <p class="score-board_text" id="count_best"></p>
     </header>
-    <div id="game-board"></div>
-    <script src="/scripts/game.js" defer type="module"></script>
+    <section id="game-board"></section>
+    <section class="btn-group">
+        <button class="btn" id="pause">pause</button>
+        <button class="btn" id="quit">quit</button>
+    </section>
+    <script src="/scripts/main.js" defer type="module"></script>
 </body>
 
 </html>
