@@ -24,8 +24,14 @@ gameBoard.addEventListener("click", function () {
     start = true;
 })
 
-quitBtn.addEventListener('click', () => { score.reset(), quit() })
+quitBtn.addEventListener('click', () => { quit() })
 pauseBtn.addEventListener('click', () => { togglePause() })
+
+function quit() {
+    score.reset();
+    location.href='index.html';
+
+}
 
 function gameLoop(currentTime) {
     if (score.getSpeedThreshold()) {
@@ -33,7 +39,7 @@ function gameLoop(currentTime) {
     }
     if (snake.gameOver) {
         score.storeBest();
-        if (confirm("GAMEOVER. \n Press OK to start new game or \n QUIT below to quit & EXIT")) {
+        if (confirm("GAMEOVER. \n Press OK to start new game or \n QUIT below to quit")) {
             window.location = '/';
         }
         return
@@ -82,10 +88,6 @@ if (!pause) {
     window.requestAnimationFrame(gameLoop)
 }
 
-function quit() {
-    window.close();
-}
-
 function showStartMessage() {
     const message = document.createElement('div');
     message.style.gridRowStart = 3;
@@ -93,7 +95,7 @@ function showStartMessage() {
     message.style.gridRowEnd = 10;
     message.style.gridColumnStart = 3;
     message.style.gridColumnEnd = 9;
-    message.innerText = "Welcome! \n Click here to start. \n Use arrow keys to control & get moving";
+    message.innerText = "Welcome! \n Click here to start. \n Use arrow keys to control & get snake moving";
     gameBoard.appendChild(message)
 }
 
