@@ -5,14 +5,4 @@ The player's current score and best score are displayed on the scoreboard above 
 
 ## How to play?
 
-To play this game on your PC, follow these steps:
-
-Click on the green "Code" button at the top right of the repository.
-In the dropdown menu, select "Download ZIP". This will download a compressed folder containing all the necessary files.
-Extract the contents of the ZIP folder to your desired location on your PC.
-Open the extracted folder and locate the game file (e.g., snake.html or snake.exe).
-Double-click on the game file to launch and start playing.
-
 Use arrow keys to control the movements - up, down, left, and right.
-
-Enjoy the game! If you encounter any issues or have questions, feel free to reach out for assistance.
